@@ -7,7 +7,7 @@ var loadingUrl = './loading.png';
 var isRetina = window.devicePixelRatio > 1;
 
 var mediaTemplate =
-    '<article class="media">' +
+    '<article class="media" data-shortcode="{shortcode}">' +
         '<figure class="media-preview">' +
             '<img src="{image}" class="media-image">' +
             '<figcaption class="media-caption"></figcaption>' +
@@ -47,7 +47,8 @@ function subst (str, data) {
 function next () {
     shortCodes.splice(0, 10).forEach(function (shortCode) {
         var $loading = $(subst(mediaTemplate, {
-            image: loadingUrl
+            image: loadingUrl,
+            shortcode: shortCode
         })).appendTo($grid);
 
         load(shortCode).then(delay(function (data) {
