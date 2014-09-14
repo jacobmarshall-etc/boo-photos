@@ -118,3 +118,12 @@ body {
 .media:hover .media-caption {
     opacity: 1;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00beeb;
+}
