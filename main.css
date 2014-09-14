@@ -1,0 +1,120 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,300italic');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: normal 400 14px/1.42857143 Lato, 'Helvetic Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+.header {
+    text-align: center;
+    font-size: 16px;
+}
+
+.header > h1 {
+    font-size: 2.5em;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.media {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 340px) {
+    .container {
+        width: 300px;
+    }
+
+    .media {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        width: 600px;
+    }
+
+    .media {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 940px) {
+    .container {
+        width: 900px;
+    }
+
+    .media {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.media-grid:before,
+.media-grid:after {
+    display: table;
+    content: ' ';
+}
+
+.media-grid:after {
+    clear: both;
+}
+
+.media {
+    padding: 10px;
+    float: left;
+}
+
+.media-preview {
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.media-image {
+    max-width: 100%;
+    display: block;
+}
+
+.media-caption {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .4);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+
+    will-change: opacity;
+    transition: opacity .2s ease-in-out;
+}
+
+.media:hover .media-caption {
+    opacity: 1;
+}
