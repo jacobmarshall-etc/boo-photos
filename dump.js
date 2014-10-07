@@ -1,4 +1,5 @@
 var util = require('util');
+var url = require('url');
 var fs = require('fs');
 var agent = require('superagent');
 var shortCodes = require('./data.json');
@@ -35,6 +36,12 @@ function get (shortCode) {
         });
 }
 
+function secureUrl (insecureUrl) {
+    var urlObj = url.parse(insecureUrl);
+    urlObj.protocol = 'https';
+    return url.format(urlObj);
+}
+
 function save (shortCode, data) {
     var path = util.format(filePath, shortCode);
     var file = JSON.stringify({
@@ -45,8 +52,8 @@ function save (shortCode, data) {
         location: data.location,
         caption: data.caption && data.caption.text,
         image: {
-            standard: data.images.low_resolution.url,
-            retina: data.images.standard_resolution.url
+            standard: secureUrl(data.images.low_resolution.url),
+            retina: secureUrl(data.images.standard_resolution.url)
         }
     });
 
