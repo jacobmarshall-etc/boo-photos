@@ -68,6 +68,12 @@ body {
     }
 }
 
+@media (min-width: 1240px) {
+    .container {
+        width: 1200px;
+    }
+}
+
 .media-grid:before,
 .media-grid:after {
     display: table;
