@@ -27,17 +27,6 @@ function throttle (fn, time) {
     };
 }
 
-function delay (fn, time) {
-    return function () {
-        var that = this,
-            args = arguments;
-
-        setTimeout(function () {
-            fn.apply(that, args);
-        }, time);
-    };
-}
-
 function subst (str, data) {
     return str.replace(/\{(\w+)\}/g, function (match, key) {
         return data[key] || '';
@@ -51,13 +40,13 @@ function next () {
             shortcode: shortCode
         })).appendTo($grid);
 
-        load(shortCode).then(delay(function (data) {
+        load(shortCode).then(function (data) {
             var $image = $loading.find('.media-image');
             image($image, data.image.standard, data.image.retina);
 
             var $caption = $loading.find('.media-caption');
             $caption.text(data.caption);
-        }, 1000));
+        });
     });
 }
 
