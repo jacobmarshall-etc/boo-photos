@@ -9,6 +9,7 @@ var $window = $(window),
 var shortCodes = [];
 var loadingUrl = './loading.png';
 var isRetina = window.devicePixelRatio > 1;
+var hasFavicon = false;
 
 var mediaTemplate =
     '<article class="media" data-shortcode="{shortcode}">' +
@@ -17,6 +18,9 @@ var mediaTemplate =
             '<figcaption class="media-caption"></figcaption>' +
         '</figure>' +
     '</article>';
+
+var faviconTemplate =
+    '<link rel="icon" type="image/png" href="{href}">';
 
 function throttle (fn, time) {
     var last = 0;
@@ -37,8 +41,17 @@ function subst (str, data) {
     });
 }
 
+function favicon (url) {
+    if (hasFavicon) return;
+    hasFavicon = true;
+
+    $(subst(faviconTemplate, {
+        href: url
+    })).appendTo('head');
+}
+
 function next () {
-    shortCodes.splice(0, 10).forEach(function (shortCode) {
+    shortCodes.splice(0, 10).forEach(function (shortCode, index) {
         var $loading = $(subst(mediaTemplate, {
             image: loadingUrl,
             shortcode: shortCode
@@ -47,6 +60,10 @@ function next () {
         load(shortCode).then(function (data) {
             var $image = $loading.find('.media-image');
             image($image, data.image.standard, data.image.retina);
+
+            if ( ! index) {
+                favicon(data.image.standard);
+            }
 
             var $caption = $loading.find('.media-caption');
             $caption.text(data.caption);
