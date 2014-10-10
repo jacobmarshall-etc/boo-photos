@@ -29,6 +29,12 @@ body {
     height: auto;
 }
 
+.container,
+.media {
+    will-change: width, height;
+    transition: width .3s, height .3s;
+}
+
 @media (min-width: 340px) {
     .container {
         width: 300px;
