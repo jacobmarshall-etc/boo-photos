@@ -1,3 +1,7 @@
+// Configure Bugsnag (prevent development errors sending)
+Bugsnag.releaseStage = location.hostname === 'boo.photos' ? 'production' : 'development';
+Bugsnag.notifyReleaseStages = ['production'];
+
 var $window = $(window),
     $document = $(document),
     $grid = $('.media-grid');
