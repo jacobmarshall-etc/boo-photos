@@ -20,7 +20,7 @@ var mediaTemplate =
     '</article>';
 
 var faviconTemplate =
-    '<link rel="icon" type="image/png" href="{href}">';
+    '<link rel="icon" type="image/jpg" href="{href}">';
 
 function throttle (fn, time) {
     var last = 0;
