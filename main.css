@@ -19,6 +19,10 @@ body {
     font-size: 2.5em;
 }
 
+.footer p {
+    text-align: center;
+}
+
 .container {
     width: 100%;
     margin: 20px auto;
@@ -132,10 +136,22 @@ body {
 }
 
 a {
-    color: inherit;
+    display: inline-block;
+    color: #00beeb;
     text-decoration: none;
+    margin: -4px -8px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
 }
 
-a:hover {
-    color: #00beeb;
+a:hover,
+a:active {
+    color: #fff;
+    background-color: #00beeb;
+}
+
+a:active {
+    background-color: #00a3ca;
 }
