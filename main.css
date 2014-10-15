@@ -139,8 +139,6 @@ a {
     display: inline-block;
     color: #00beeb;
     text-decoration: none;
-    margin: -4px -8px;
-    padding: 4px 8px;
     border-radius: 3px;
     position: relative;
     z-index: 1;
@@ -150,6 +148,8 @@ a:hover,
 a:active {
     color: #fff;
     background-color: #00beeb;
+    margin: -4px -8px;
+    padding: 4px 8px;
 }
 
 a:active {
