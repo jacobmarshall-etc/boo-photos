@@ -141,7 +141,8 @@ a {
     display: inline-block;
     color: #00beeb;
     text-decoration: none;
-    z-index: 2;
+    z-index: 1;
+    transition: color .2s;
 }
 
 a:before {
@@ -154,8 +155,7 @@ a:before {
     background-color: transparent;
     border-radius: 3px;
     z-index: -1;
-    transition: color .2s,
-                background-color .2s,
+    transition: background-color .2s,
                 margin .2s,
                 padding .2s;
 }
