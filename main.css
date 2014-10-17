@@ -136,22 +136,41 @@ body {
 }
 
 a {
+    position: relative;
     display: inline-block;
     color: #00beeb;
     text-decoration: none;
+    z-index: 2;
+}
+
+a:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
     border-radius: 3px;
-    position: relative;
-    z-index: 1;
+    z-index: -1;
+    transition: color .2s,
+                background-color .2s,
+                margin .2s,
+                padding .2s;
 }
 
 a:hover,
 a:active {
     color: #fff;
+}
+
+a:hover:before,
+a:active:before {
     background-color: #00beeb;
     margin: -4px -8px;
     padding: 4px 8px;
 }
 
-a:active {
+a:active:before {
     background-color: #00a3ca;
 }
