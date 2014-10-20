@@ -175,3 +175,22 @@ a:active:before {
 a:active:before {
     background-color: #00a3ca;
 }
+
+a.promo {
+    color: #F04646;
+}
+
+a.promo:hover,
+a.promo:active {
+    color: #fff;
+}
+
+a.promo:hover:before,
+a.promo:active:before {
+    background-color: #F04646;
+}
+
+a.promo > small {
+    display: block;
+    font-size: 12px;
+}

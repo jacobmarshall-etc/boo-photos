@@ -4,7 +4,8 @@ Bugsnag.notifyReleaseStages = ['production'];
 
 var $window = $(window),
     $document = $(document),
-    $grid = $('.media-grid');
+    $grid = $('.media-grid'),
+    $promo = $('#promo-time');
 
 var shortCodes = [];
 var loadingUrl = './loading.png';
@@ -21,6 +22,9 @@ var mediaTemplate =
 
 var faviconTemplate =
     '<link rel="icon" type="image/jpg" href="{href}">';
+
+var promoTemplate =
+    '{time} left to vote!';
 
 function throttle (fn, time) {
     var last = 0;
@@ -90,7 +94,7 @@ var scroll = throttle(function () {
     var documentBox = $document.height() - 300;
     var windowBox = $window.scrollTop() + $window.height();
     if (windowBox >= documentBox) next();
-}, 100);
+}, 20);
 
 function init () {
     $window.on('scroll', scroll);
@@ -101,3 +105,9 @@ $.get('./data.json').then(function (data) {
     shortCodes = data;
     init();
 });
+
+// Promo
+
+$promo.text(subst(promoTemplate, {
+    time: moment([2014, 9, 24, 17]).from(moment(), true)
+}));
