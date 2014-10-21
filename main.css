@@ -1,6 +1,78 @@
 @import url('//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css');
 @import url('//fonts.googleapis.com/css?family=Lato:400,300italic');
 
+@-webkit-keyframes pulse {
+    0% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+    50% {
+        opacity: .2;
+        margin: -6px -10px;
+        padding: 6px 10px;
+    }
+    100% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+    50% {
+        opacity: .2;
+        margin: -6px -10px;
+        padding: 6px 10px;
+    }
+    100% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@-o-keyframes pulse {
+    0% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+    50% {
+        opacity: .2;
+        margin: -6px -10px;
+        padding: 6px 10px;
+    }
+    100% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+    50% {
+        opacity: .2;
+        margin: -6px -10px;
+        padding: 6px 10px;
+    }
+    100% {
+        opacity: .05;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -152,12 +224,16 @@ a:before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: transparent;
+    opacity: 0;
     border-radius: 3px;
     z-index: -1;
-    transition: background-color .2s,
+    transition: opacity .2s,
                 margin .2s,
                 padding .2s;
+}
+
+a:before {
+    background-color: #00beeb;
 }
 
 a:hover,
@@ -167,7 +243,7 @@ a:active {
 
 a:hover:before,
 a:active:before {
-    background-color: #00beeb;
+    opacity: 1;
     margin: -4px -8px;
     padding: 4px 8px;
 }
@@ -176,18 +252,11 @@ a:active:before {
     background-color: #00a3ca;
 }
 
-a.promo {
-    color: #F04646;
-}
-
-a.promo:hover,
-a.promo:active {
-    color: #fff;
-}
-
-a.promo:hover:before,
-a.promo:active:before {
-    background-color: #F04646;
+a.pulse:not(:hover):before {
+    -webkit-animation: pulse 1s infinite;
+    -moz-animation: pulse 1s infinite;
+    -o-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
 }
 
 a.promo > small {
