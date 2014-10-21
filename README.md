@@ -37,3 +37,8 @@ re-dumped. You will need to delete the meta data file first.
 ```
 node dump.js
 ```
+
+What it looks like...
+---
+
+![Screenshot](./screenshot.png)
