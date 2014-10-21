@@ -108,6 +108,9 @@ $.get('./data.json').then(function (data) {
 
 // Promo
 
+moment.tz.add('America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0');
+
 $promo.text(subst(promoTemplate, {
-    time: moment([2014, 9, 24, 17]).from(moment(), true)
+    time: moment.tz([2014, 9, 24, 17], "America/New_York")
+             .from(moment.tz("America/New_York"), true)
 }));
