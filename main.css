@@ -3,17 +3,17 @@
 
 @-webkit-keyframes pulse {
     0% {
-        opacity: .05;
+        opacity: 0;
         margin: 0;
         padding: 0;
     }
     50% {
-        opacity: .2;
+        opacity: .1;
         margin: -6px -10px;
         padding: 6px 10px;
     }
     100% {
-        opacity: .05;
+        opacity: 0;
         margin: 0;
         padding: 0;
     }
@@ -253,10 +253,10 @@ a:active:before {
 }
 
 a.pulse:not(:hover):before {
-    -webkit-animation: pulse 1s infinite;
-    -moz-animation: pulse 1s infinite;
-    -o-animation: pulse 1s infinite;
-    animation: pulse 1s infinite;
+    -webkit-animation: pulse 1.5s ease-in-out infinite;
+    -moz-animation: pulse 1.5s ease-in-out infinite;
+    -o-animation: pulse 1.5s ease-in-out infinite;
+    animation: pulse 1.5s ease-in-out infinite;
 }
 
 a.promo {
