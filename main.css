@@ -259,6 +259,19 @@ a.pulse:not(:hover):before {
     animation: pulse 1s infinite;
 }
 
+a.promo {
+    color: #FD6E8A;
+}
+
+a.promo:hover,
+a.promo:active {
+    color: #fff;
+}
+
+a.promo:before {
+    background-color: #FD6E8A;
+}
+
 a.promo > small {
     display: block;
     font-size: 12px;
