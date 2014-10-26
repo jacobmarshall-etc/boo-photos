@@ -1,5 +1,6 @@
 {
     "devDependencies": {
-        "superagent": "^0.20.0"
+        "superagent": "^0.20.0",
+        "moment": "^2.8.3"
     }
 }
