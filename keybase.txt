@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/jacobmarshall
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://boo.photos
+  * I am jacobmarshall (https://keybase.io/jacobmarshall) on keybase.
+  * I have a public key with fingerprint 4543 0CA7 26CF 0989 29F7  1D0A C25C E133 0AFC 3EB0
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "45430ca726cf098929f71d0ac25ce1330afc3eb0",
+            "host": "keybase.io",
+            "key_id": "c25ce1330afc3eb0",
+            "uid": "a1ba4c2f2207eda71129793d38b87900",
+            "username": "jacobmarshall"
+        },
+        "service": {
+            "hostname": "boo.photos",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1418885438,
+    "expire_in": 157680000,
+    "prev": "06773c7f6bfe2320f4950b4c8700e9f5023f842c84666e47b1228b02b6a75a49",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.1.6
+Comment: https://keybase.io/crypto
+
+yMHuAnicbZFdSBRRFMd3y6w2LSH7eLAHRx9KbJu5MzsfS1sSbD6UJeKLEizzcced
+WmfWmXF1UTOFMpKEwqRAXHooMoPsYwkDSVpfVvMh04oSWyh82NUQUVGj7I7YW/fl
+3nvO7/8/594znLnV5rDvmbr62Fu/umAfHVqutZXfDp9owARNCmPuBuwS3NhkRa2C
+elBXVBNzY5SLInGRZwAtyjjHcoCTGULCeRG4REiQJM7LIgkFHCvE/JphKZCNwBvQ
+qWgohi4+RULR//C1GwmeEHhKBDIAOAMlniEIwDEcKZGswDIcvgEaUFf5aojoi7yo
+CdW8bvj5QABrKsRQKqSI0Grcqr+JCZrmDPo1UzOQPKijg6gFUNxvmkHDbenMcNAC
+66Dg27TwCYoqobcjRQjqhqKpmJtApGgqlidBESzLot9gCzFYH1R06FMswsXQLI6W
+VQeGkCVOMwwpMjItyBCQAJcpzoULlMgyOA452YUDUmYpILIUTdOQYgQCAFbAgUDz
+jIunOMx6VI2qIW8S9clXIU9DqVJ5s1aHWNPboQtpNrvDlr5tizU+m2Nn1r+hhpe3
+r1eUSWbp9GqJs25pSb/OfsnozpprdjQWrd86moxc43dgh0+dfNlRcvp9dkFl7/SZ
+/BXB//qBtAiifZ3xiY4XFcOdSfvac+/oYp4/mvZwX7z/UMZ0zeBI15W9/TdvfD/m
+iEQXiugj5aXFH/5MjoUSZ9nF2Ltc55P0b0Oflsq66qP3FiadU5fP3Sk+mEb8TnD0
+U66tK9fzTI3v8lC9R1p6cmBO0iPPdlYmjrf+2p99PxyPcvOfd8905wbcA3k/21ce
+VYfGxyPnffORzJ6R2GrqLhhs/5j8kcgc625Zi7kL1PTG2MyBidZUTX6zt9LzZlYi
+jbmZlNH21TuQetX3F4yLHyk=
+=8aMc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jacobmarshall
+
+==================================================================
