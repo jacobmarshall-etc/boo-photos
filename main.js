@@ -101,7 +101,7 @@ function init () {
     scroll();
 }
 
-$.get('./data.json').then(function (data) {
+$.get('./data.json?_=' + Date.now()).then(function (data) {
     shortCodes = data;
     init();
 });
