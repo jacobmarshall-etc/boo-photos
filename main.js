@@ -4,8 +4,7 @@ Bugsnag.notifyReleaseStages = ['production'];
 
 var $window = $(window),
     $document = $(document),
-    $grid = $('.media-grid'),
-    $promo = $('#promo-time');
+    $grid = $('.media-grid');
 
 var shortCodes = [];
 var loadingUrl = './loading.png';
@@ -22,9 +21,6 @@ var mediaTemplate =
 
 var faviconTemplate =
     '<link rel="icon" type="image/jpg" href="{href}">';
-
-var promoTemplate =
-    '{time} left to vote!';
 
 function throttle (fn, time) {
     var last = 0;
@@ -105,12 +101,3 @@ $.get('./data.json?_=' + Date.now()).then(function (data) {
     shortCodes = data;
     init();
 });
-
-// Promo
-
-moment.tz.add('America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0');
-
-$promo.text(subst(promoTemplate, {
-    time: moment.tz([2014, 9, 24, 17], "America/New_York")
-             .from(moment.tz("America/New_York"), true)
-}));
