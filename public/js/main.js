@@ -7,7 +7,7 @@ var $window = $(window),
     $grid = $('.media-grid');
 
 var shortCodes = [];
-var loadingUrl = './loading.png';
+var loadingUrl = 'img/loading.png';
 var isRetina = window.devicePixelRatio > 1;
 var hasFavicon = false;
 
@@ -97,7 +97,7 @@ function init () {
     scroll();
 }
 
-$.get('./data.json?_=' + Date.now()).then(function (data) {
+$.get('data.json?_=' + Date.now()).then(function (data) {
     shortCodes = data;
     init();
 });

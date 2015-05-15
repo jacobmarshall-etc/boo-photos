@@ -1,6 +1,8 @@
 Boo Photos
 ===
 
+This readme is currently out of date, please check back another time.
+
 Hello
 ---
 

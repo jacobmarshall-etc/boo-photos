@@ -2,10 +2,10 @@ var util = require('util');
 var url = require('url');
 var fs = require('fs');
 var agent = require('superagent');
-var shortCodes = require('./data.json');
+var shortCodes = require('../public/data.json');
 var accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 var dataUrl = 'https://api.instagram.com/v1/media/shortcode/%s?access_token=%s';
-var filePath = './data/%s.json';
+var filePath = __dirname + '/../public/data/%s.json';
 
 function next () {
     var shortCode = shortCodes.shift();
